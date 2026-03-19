@@ -38,7 +38,7 @@ function render() {
     <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
       <div class="p-4">
         <h4 class="font-serif text-lg text-slate-800 mb-1">${file.name}</h4>
-        <iframe src="${file.file}" width="100vw" height="auto"></iframe>
+        <iframe src="${file.file}" width="100vw"></iframe>
         <br>
         <a href="${file.file}"  class="flex items-center justify-center gap-2 w-full bg-slate-900 text-white py-3 rounded-xl text-sm font-semibold hover:bg-amber-800 transition shadow-md">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
