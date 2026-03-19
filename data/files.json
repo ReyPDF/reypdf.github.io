@@ -1,4 +1,12 @@
 [
-  { "name": "Umasa ka sa diyos", "file": "docs/umasa-ka-sa-diyos.pdf" },
-  { "name": "Umawit at magpuri antonio", "file": "docs/umawit-at-magpuri-antonio-pdf.pdf" }
+  {
+    "name": "umasa ka sa diyos",
+    "file": "docs/umasa-ka-sa-diyos.pdf",
+    "page": "pdf/umasa-ka-sa-diyos.html"
+  },
+  {
+    "name": "umawit at magpuri antonio pdf",
+    "file": "docs/umawit-at-magpuri-antonio-pdf.pdf",
+    "page": "pdf/umawit-at-magpuri-antonio-pdf.html"
+  }
 ]
