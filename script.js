@@ -46,3 +46,16 @@ function render() {
     `<a href="${file.page}">${file.name}</a>`
   ).join('');
 }
+
+let allFiles = [];
+let filteredFiles = [];
+let currentPage = 1;
+const perPage = 10;
+
+fetch('data/files.json')
+  .then(res => res.json())
+  .then(data => {
+    allFiles = data.sort((a, b) => a.name.localeCompare(b.name));
+    filteredFiles = allFiles;
+    render();
+  });
