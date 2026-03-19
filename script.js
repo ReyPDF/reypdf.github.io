@@ -47,6 +47,17 @@ function render() {
   ).join('');
 }
 
+document.getElementById('search').addEventListener('input', (e) => {
+  const value = e.target.value.toLowerCase();
+
+  filteredFiles = allFiles.filter(file =>
+    file.name.toLowerCase().includes(value)
+  );
+
+  currentPage = 1;
+  render();
+});
+
 let allFiles = [];
 let filteredFiles = [];
 let currentPage = 1;
