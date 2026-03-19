@@ -46,6 +46,7 @@ function render() {
         </a>
       </div>
     </div>
+    <hr>
     `;
 
     container.appendChild(div);
