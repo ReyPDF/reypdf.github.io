@@ -4,6 +4,10 @@ body {
   margin: auto;
 }
 
+header{
+  background-color: white !important; 
+}
+
 iframe {
   border: 1px solid #ccc;
 }
