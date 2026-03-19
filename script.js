@@ -36,16 +36,18 @@ function render() {
 
     div.innerHTML = `
     <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-      <div class="bg-slate-100 h-40 flex items-center justify-center border-b">
-          <svg class="w-16 h-16 text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path><path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path></svg>
+      <div class="aspect-[4/3] bg-slate-50 rounded-2xl flex items-center justify-center relative overflow-hidden">
+          <span class="absolute top-3 left-3 bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded-md uppercase">New</span>
+          <svg class="w-12 h-12 text-slate-200 group-hover:scale-110 transition" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
       </div>
-      <div class="p-5">
-        <h4><a href="${file.page}" class="text-xs text-slate-500 mt-1">${file.name}</a></h3>
-
-        <iframe src="${file.file}" width="300" height="200"></iframe>
-        
+      <div class="p-4">
+        <a href="${file.page}" class="text-xs text-slate-500 mt-1"><h4 class="font-serif text-lg text-slate-800 mb-1">${file.name}</h3></a>
+        <iframe src="${file.file}" width="auto" height="auto"></iframe>
         <br>
-        <a href="${file.file}"  class="mt-4 block text-center border border-amber-600 text-amber-600 py-2 rounded hover:bg-amber-600 hover:text-white transition text-sm font-semibold" download>Download</a>
+        <a href="${file.file}"  class="flex items-center justify-center gap-2 w-full bg-slate-900 text-white py-3 rounded-xl text-sm font-semibold hover:bg-amber-800 transition shadow-md">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          Download
+        </a>
       </div>
     </div>
     `;
