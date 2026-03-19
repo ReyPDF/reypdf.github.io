@@ -1,0 +1,13 @@
+body {
+  font-family: Arial;
+  max-width: 800px;
+  margin: auto;
+}
+
+iframe {
+  border: 1px solid #ccc;
+}
+
+button {
+  margin: 5px;
+}
