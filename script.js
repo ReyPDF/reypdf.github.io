@@ -35,13 +35,19 @@ function render() {
     const div = document.createElement('div');
 
     div.innerHTML = `
-      <h3><a href="${file.page}">${file.name}</a></h3>
+    <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+      <div class="bg-slate-100 h-40 flex items-center justify-center border-b">
+          <svg class="w-16 h-16 text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path><path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path></svg>
+      </div>
+      <div class="p-5">
+        <h4><a href="${file.page}" class="text-xs text-slate-500 mt-1">${file.name}</a></h3>
 
-      <iframe src="${file.file}" width="300" height="200"></iframe>
-
-      <br>
-      <a href="${file.file}" download>Download</a>
-      <hr>
+        <iframe src="${file.file}" width="300" height="200"></iframe>
+        
+        <br>
+        <a href="${file.file}"  class="mt-4 block text-center border border-amber-600 text-amber-600 py-2 rounded hover:bg-amber-600 hover:text-white transition text-sm font-semibold" download>Download</a>
+      </div>
+    </div>
     `;
 
     container.appendChild(div);
