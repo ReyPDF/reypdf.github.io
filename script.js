@@ -61,3 +61,12 @@ function render() {
     pagination.appendChild(btn);
   }
 }
+
+div.innerHTML = `
+  <h3>${file.name}</h3>
+  <iframe src="${file.file}" width="300" height="200"></iframe>
+  <br>
+  <a href="${file.page}">View Page</a>
+  <a href="${file.file}" download>Download</a>
+  <hr>
+`;

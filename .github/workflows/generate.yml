@@ -1,0 +1,32 @@
+name: Generate PDF Site
+
+on:
+  push:
+    paths:
+      - 'docs/**'        # trigger when PDFs change
+      - 'generate.js'    # or script changes
+  workflow_dispatch:      # allow manual run
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Run generator
+        run: node generate.js
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/files.json pdf sitemap.xml
+          git commit -m "Auto-generate PDF pages and sitemap" || echo "No changes to commit"
+          git push
