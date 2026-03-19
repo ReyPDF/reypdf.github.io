@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rey PDF</title>
+  <title>Rey PDF Library</title>
+
+  <meta name="description" content="Browse and download free PDFs.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Rey PDF</h1>
+<h1>Rey PDF Library</h1>
+<p>Browse, search, and download free PDFs.</p>
 
-<input type="text" id="search" placeholder="Search PDFs..." />
+<input 
+  type="text" 
+  id="search" 
+  placeholder="Search PDFs..." 
+  autocomplete="off"
+/>
 
 <div id="pdf-container"></div>
 
 <div id="pagination"></div>
+
+<!-- Hidden SEO links -->
+<div id="all-links" style="display:none;"></div>
 
 <script src="script.js"></script>
 </body>
