@@ -52,8 +52,8 @@ function render() {
   });
 
   // Pagination
-  //const totalPages = Math.ceil(filteredFiles.length / perPage);
-  const totalPages = 3;
+  const totalPages = Math.ceil(filteredFiles.length / perPage);
+  //const totalPages = 3;
   pagination.innerHTML = '';
 
   for (let i = 1; i <= totalPages; i++) {
