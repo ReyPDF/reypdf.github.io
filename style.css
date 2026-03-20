@@ -15,3 +15,7 @@ iframe {
 button {
   margin: 5px;
 }
+
+.buttonPages{
+  border-left: 1px solid orange;
+}

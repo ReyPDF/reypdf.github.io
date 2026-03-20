@@ -46,7 +46,6 @@ function render() {
         </a>
       </div>
     </div>
-    <br>
     `;
 
     container.appendChild(div);
@@ -54,11 +53,13 @@ function render() {
 
   // Pagination
   const totalPages = Math.ceil(filteredFiles.length / perPage);
+  //const totalPages = 3;
   pagination.innerHTML = '';
 
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement('button');
     btn.innerText = i;
+    btn.classList = "buttonPages";
 
     btn.onclick = () => {
       currentPage = i;
